@@ -1,0 +1,67 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.container{
+}
+
+.row{
+	float: left;
+	clear: both;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.row-container{
+	clear: both;
+	margin: 0 auto;
+	max-width: 1000px;
+	padding: 0 5%;
+}
+
+.content{
+	padding: 20px;
+}
+
+.abc{
+	background-color: red;
+}
+
+/* STYLE */
+.gray{
+	background-color: gray;
+}
+
+.rounded{
+	border-radius: 10px;
+}
+
+/* LANDING */
+.top{
+	float: right;
+	background-color: yellow;
+}
+
+.logo{
+	text-align: center;
+}
+
+.landing_action{
+	margin: 0 auto;
+	text-align: center;
+	max-width: 400px;
+}
+
+.input100{
+	width: 99%;
+}
+
+/* FONTS */
+.center{
+	text-align: center;
+}
+
+.marketing{
+	font-size: 2.5em;
+}
