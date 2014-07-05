@@ -71,18 +71,19 @@
       <div class="jumbotron">
         <h1>Таблица игр</h1>
         <p>Здесь вы можете присоединиться к любой игре, в которой еще есть места.</p>
-        <p><a href="#" class="btn btn-primary btn-lg" role="button">Подробнее &raquo;</a></p>
+        <!--<p><a href="#" class="btn btn-primary btn-lg" role="button">Подробнее &raquo;</a></p>-->
       </div>
 
       <ul class="nav nav-tabs">
-        <li class="active"><a href="#home" data-toggle="tab">Все</a></li>
-        <li><a href="#profile" data-toggle="tab">Баскетбол</a></li>
-        <li><a href="#messages" data-toggle="tab">Воллейбол</a></li>
-        <li><a href="#settings" data-toggle="tab">Футбол</a></li>
+        <li class="active"><a href="#all" data-toggle="tab">Все</a></li>
+        <li><a href="#basket" data-toggle="tab">Баскетбол</a></li>
+        <li><a href="#volley" data-toggle="tab">Воллейбол</a></li>
+        <li><a href="#football" data-toggle="tab">Футбол</a></li>
       </ul>
       
       <div class="tab-content">
-        <div class="tab-pane active" id="home">
+        <!-- All games -->
+        <div class="tab-pane active" id="all">
           <div class="panel panel-deafult">
             <br>
             <div class="panel panel-default">
@@ -91,119 +92,277 @@
               </div>
               <div class="panel-body">
                 <div class="col-md-2">
-                  <p class="text-center">22 декабря воскресение 14:30 - 16:00</p>
+                  <p>21 июля суббота 17:00 - 19:00</p>
                 </div>
                 <div class="col-md-6">
-                  <p>Баскетбол 5х5</p>
-                  <p><a href="" data-toggle="modal" data-target="#map000001Modal">Красноармейская 28а</a></p>
-                  <p>Души: да | Раздевалки: да</p>
-                </div>
-                <div class="col-md-2">
-                  <p class="text-center">150 RUB <br> за 2 часа</p>
-                </div>
-                <div class="col-md-2">
-                  <p class="text-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">Оставить заявку</button>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Точно пойду</a></li>
-                        <li><a href="#">Возможно пойду</a></li>
-                      </ul>
+                  <p>Баскетбол в зале 5х5</p>
+                  <p><a href="" data-toggle="modal" data-target="#map000001Modal">ФОК "Факел"</a></p>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="14" aria-valuemin="0" aria-valuemax="15" style="width: 56%;">
+                      <span class="">8/15</span>
                     </div>
-                  </p>
+                  </div>
+                  <!-- Список участников -->
+                  <div class="panel-group" id="accordion" style="margin-bottom:0px;">
+                    <div class="panel panel-default">
+                      <div class="panel-heading" style="text-align: center">
+                        <h5 class="panel-title" style="font-size:1em;">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse-000001">
+                            Список участников <span class="caret"></span> 
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapse-000001" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>1. User 1</p>
+                          <p>2. User 2</p>
+                          <p>3. User 3</p>
+                          <p>4. User 4</p>
+                          <p>5. User 5</p>
+                          <p>6. User 6</p>
+                          <p>7. User 7</p>
+                          <p>8. User 8</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- Конец списка участников -->
+                </div>
+                <div class="col-md-2">
+                  <p>150 RUB <br> за 2 часа</p>
+                </div>
+                <div class="col-md-2">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-warning btn-xs dropdown-toggle" data-toggle="dropdown">Идет набор</button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Точно пойду</a></li>
+                      <li><a href="#">Возможно пойду</a></li>
+                      <li><a href="#">Не пойду</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                #000002
+              </div>
+              <div class="panel-body">
+                <div class="col-md-2">
+                  <p>22 июля воскресение 17:00 - 19:00</p>
+                </div>
+                <div class="col-md-6">
+                  <p>Стритбол 3х3</p>
+                  <p><a href="" data-toggle="modal" data-target="#map000001Modal">Площадка гимназии №70</a></p>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="14" aria-valuemin="0" aria-valuemax="15" style="width: 35%;">
+                      <span class="">5/15</span>
+                    </div>
+                  </div>
+                  <!-- Список участников -->
+                  <div class="panel-group" id="accordion" style="margin-bottom:0px;">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h5 class="panel-title" style="font-size:1em;">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse-000002">
+                            Список участников <span class="caret"></span> 
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapse-000002" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>1. User 1</p>
+                          <p>2. User 2</p>
+                          <p>3. User 3</p>
+                          <p>4. User 4</p>
+                          <p>5. User 5</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- Конец списка участников -->
+                </div>
+                <div class="col-md-2">
+                  <p>Бесплатно</p>
+                </div>
+                <div class="col-md-2">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-danger btn-xs" data-toggle="dropdown">Отказался</button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Точно пойду</a></li>
+                      <li><a href="#">Возможно пойду</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
-                #000001
+                #000003
               </div>
               <div class="panel-body">
                 <div class="col-md-2">
-                  <p class="text-center">22 декабря воскресение 14:30 - 16:00</p>
+                  <p>28 июля суббота 17:00 - 19:00</p>
                 </div>
                 <div class="col-md-6">
-                  <p>Баскетбол 5х5</p>
-                  <p><a href="" data-toggle="modal" data-target="#map000001Modal">Красноармейская 28а</a></p>
-                  <p>Души: да | Раздевалки: да</p>
-                </div>
-                <div class="col-md-2">
-                  <p class="text-center">150 RUB <br> за 2 часа</p>
-                </div>
-                <div class="col-md-2">
-                  <p class="text-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">Оставить заявку</button>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Точно пойду</a></li>
-                        <li><a href="#">Возможно пойду</a></li>
-                      </ul>
+                  <p>Баскетбол в зале 5х5</p>
+                  <p><a href="" data-toggle="modal" data-target="#map000001Modal">ФОК "Факел"</a></p>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="14" aria-valuemin="0" aria-valuemax="15" style="width: 100%;">
+                      <span class="">15/15</span>
                     </div>
-                  </p>
+                  </div>
+                  <!-- Список участников -->
+                  <div class="panel-group" id="accordion" style="margin-bottom:0px;">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h5 class="panel-title" style="font-size:1em;">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse-000003">
+                            Список участников <span class="caret"></span> 
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapse-000003" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>1. User 1</p>
+                          <p>2. User 2</p>
+                          <p>3. User 3</p>
+                          <p>4. User 4</p>
+                          <p>5. User 5</p>
+                          <p>6. User 6</p>
+                          <p>7. User 7</p>
+                          <p>8. User 8</p>
+                          <p>9. User 9</p>
+                          <p>10. User 10</p>
+                          <p>11. User 11</p>
+                          <p>12. User 12</p>
+                          <p>13. User 13</p>
+                          <p>14. User 14</p>
+                          <p>15. User 15</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- Конец списка участников -->
+                </div>
+                <div class="col-md-2">
+                  <p>150 RUB <br> за 2 часа</p>
+                </div>
+                <div class="col-md-2">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-default btn-xs" disabled="disabled" data-toggle="dropdown">Места заполнены</button>
+                  </div>
                 </div>
               </div>
             </div>
+            <!-- Карточка игры -->
             <div class="panel panel-default">
               <div class="panel-heading">
-                #000001
+                #000004
               </div>
               <div class="panel-body">
                 <div class="col-md-2">
-                  <p class="text-center">22 декабря воскресение 14:30 - 16:00</p>
+                  <p>29 июля воскресение 14:30 - 16:00</p>
                 </div>
                 <div class="col-md-6">
-                  <p>Баскетбол 5х5</p>
+                  <p>Стритбол 3х3</p>
                   <p><a href="" data-toggle="modal" data-target="#map000001Modal">Красноармейская 28а</a></p>
-                  <p>Души: да | Раздевалки: да</p>
-                </div>
-                <div class="col-md-2">
-                  <p class="text-center">150 RUB <br> за 2 часа</p>
-                </div>
-                <div class="col-md-2">
-                  <p class="text-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">Оставить заявку</button>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Точно пойду</a></li>
-                        <li><a href="#">Возможно пойду</a></li>
-                      </ul>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="14" aria-valuemin="0" aria-valuemax="15" style="width: 28%;">
+                      <span class="">4/15</span>
                     </div>
-                  </p>
+                  </div>
+                  <!-- Список участников -->
+                  <div class="panel-group" id="accordion" style="margin-bottom:0px;">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h5 class="panel-title" style="font-size:1em;">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse-000004">
+                            Список участников <span class="caret"></span> 
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapse-000004" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>1. User 1</p>
+                          <p>2. User 2</p>
+                          <p>3. User 3</p>
+                          <p>4. User 4</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- Конец списка участников -->
+                </div>
+                <div class="col-md-2">
+                  <p>Бесплатно</p>
+                </div>
+                <div class="col-md-2">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">Точно пойду</button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Отказаться</a></li>
+                      <li><a href="#">Возможно пойду</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
+            </div><!-- Конец карточки игры -->
+
+            <!-- Карточка игры -->
             <div class="panel panel-default">
               <div class="panel-heading">
-                #000001
+                #000005
               </div>
               <div class="panel-body">
                 <div class="col-md-2">
-                  <p class="text-center">22 декабря воскресение 14:30 - 16:00</p>
+                  <p>29 июля воскресение 14:30 - 16:00</p>
                 </div>
                 <div class="col-md-6">
-                  <p>Баскетбол 5х5</p>
-                  <p><a href="" data-toggle="modal" data-target="#map000001Modal">Красноармейская 28а</a></p>
-                  <p>Души: да | Раздевалки: да</p>
-                </div>
-                <div class="col-md-2">
-                  <p class="text-center">150 RUB <br> за 2 часа</p>
-                </div>
-                <div class="col-md-2">
-                  <p class="text-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">Точно пойду</button>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Отказаться</a></li>
-                        <li><a href="#">Возможно пойду</a></li>
-                      </ul>
+                  <p>Стритбол 3х3</p>
+                  <p><a href="" data-toggle="modal" data-target="#map000001Modal">Площадка гимназии №70</a></p>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="14" aria-valuemin="0" aria-valuemax="15" style="width: 28%;">
+                      <span class="">4/15</span>
                     </div>
-                  </p>
+                  </div>
+                  <!-- Список участников -->
+                  <div class="panel-group" id="accordion" style="margin-bottom:0px;">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h5 class="panel-title" style="font-size:1em;">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse-000005">
+                            Список участников <span class="caret"></span> 
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapse-000005" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>1. User 1</p>
+                          <p>2. User 2</p>
+                          <p>3. User 3</p>
+                          <p>4. User 4</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- Конец списка участников -->
+                </div>
+                <div class="col-md-2">
+                  <p>150 RUB <br> за 2 часа</p>
+                </div>
+                <div class="col-md-2">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-warning btn-xs dropdown-toggle" data-toggle="dropdown">Возможно пойду</button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Точно пойду</a></li>
+                      <li><a href="#">Отказаться</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
+            </div><!-- Конец карточки игры -->
           </div>  
-        </div>
-        <div class="tab-pane" id="profile">
+        </div><!-- End of All games -->
+
+        <!-- Basketball games -->
+        <div class="tab-pane" id="basket">
           <div class="panel panel-deafult">
             <br>
             <div class="panel panel-default">
@@ -212,62 +371,184 @@
               </div>
               <div class="panel-body">
                 <div class="col-md-2">
-                  <p class="text-center">22 декабря воскресение 14:30 - 16:00</p>
+                  <p>21 июля суббота 17:00 - 19:00</p>
                 </div>
                 <div class="col-md-6">
-                  <p>Баскетбол 5х5</p>
-                  <p><a href="" data-toggle="modal" data-target="#map000001Modal">Красноармейская 28а</a></p>
-                  <p>Души: да | Раздевалки: да</p>
-                </div>
-                <div class="col-md-2">
-                  <p class="text-center">150 RUB <br> за 2 часа</p>
-                </div>
-                <div class="col-md-2">
-                  <p class="text-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-danger btn-xs dropdown-toggle" data-toggle="dropdown">Отказался</button>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Точно пойду</a></li>
-                        <li><a href="#">Возможно пойду</a></li>
-                      </ul>
+                  <p>Баскетбол в зале 5х5</p>
+                  <p><a href="" data-toggle="modal" data-target="#map000001Modal">ФОК "Факел"</a></p>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="14" aria-valuemin="0" aria-valuemax="15" style="width: 56%;">
+                      <span class="">8/15</span>
                     </div>
-                  </p>
+                  </div>
+                  <!-- Список участников -->
+                  <div class="panel-group" id="accordion" style="margin-bottom:0px;">
+                    <div class="panel panel-default">
+                      <div class="panel-heading" style="text-align: center">
+                        <h5 class="panel-title" style="font-size:1em;">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse-000001">
+                            Список участников <span class="caret"></span> 
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapse-000001" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>1. User 1</p>
+                          <p>2. User 2</p>
+                          <p>3. User 3</p>
+                          <p>4. User 4</p>
+                          <p>5. User 5</p>
+                          <p>6. User 6</p>
+                          <p>7. User 7</p>
+                          <p>8. User 8</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- Конец списка участников -->
+                </div>
+                <div class="col-md-2">
+                  <p>150 RUB <br> за 2 часа</p>
+                </div>
+                <div class="col-md-2">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-warning btn-xs dropdown-toggle" data-toggle="dropdown">Идет набор</button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Точно пойду</a></li>
+                      <li><a href="#">Возможно пойду</a></li>
+                      <li><a href="#">Не пойду</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                #000002
+              </div>
+              <div class="panel-body">
+                <div class="col-md-2">
+                  <p>22 июля воскресение 17:00 - 19:00</p>
+                </div>
+                <div class="col-md-6">
+                  <p>Стритбол 3х3</p>
+                  <p><a href="" data-toggle="modal" data-target="#map000001Modal">Площадка гимназии №70</a></p>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="14" aria-valuemin="0" aria-valuemax="15" style="width: 35%;">
+                      <span class="">5/15</span>
+                    </div>
+                  </div>
+                  <!-- Список участников -->
+                  <div class="panel-group" id="accordion" style="margin-bottom:0px;">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h5 class="panel-title" style="font-size:1em;">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse-000002">
+                            Список участников <span class="caret"></span> 
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapse-000002" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>1. User 1</p>
+                          <p>2. User 2</p>
+                          <p>3. User 3</p>
+                          <p>4. User 4</p>
+                          <p>5. User 5</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- Конец списка участников -->
+                </div>
+                <div class="col-md-2">
+                  <p>Бесплатно</p>
+                </div>
+                <div class="col-md-2">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-danger btn-xs" data-toggle="dropdown">Отказался</button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Точно пойду</a></li>
+                      <li><a href="#">Возможно пойду</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="panel panel-default">
               <div class="panel-heading">
-                #000001
+                #000003
               </div>
               <div class="panel-body">
                 <div class="col-md-2">
-                  <p class="text-center">22 декабря воскресение 14:30 - 16:00</p>
+                  <p>28 июля суббота 17:00 - 19:00</p>
                 </div>
                 <div class="col-md-6">
-                  <p>Баскетбол 5х5</p>
-                  <p><a href="" data-toggle="modal" data-target="#map000001Modal">Красноармейская 28а</a></p>
-                  <p>Души: да | Раздевалки: да</p>
-                </div>
-                <div class="col-md-2">
-                  <p class="text-center">150 RUB <br> за 2 часа</p>
-                </div>
-                <div class="col-md-2">
-                  <p class="text-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">Оставить заявку</button>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Точно пойду</a></li>
-                        <li><a href="#">Возможно пойду</a></li>
-                      </ul>
+                  <p>Баскетбол в зале 5х5</p>
+                  <p><a href="" data-toggle="modal" data-target="#map000001Modal">ФОК "Факел"</a></p>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="14" aria-valuemin="0" aria-valuemax="15" style="width: 100%;">
+                      <span class="">15/15</span>
                     </div>
-                  </p>
+                  </div>
+                  <!-- Список участников -->
+                  <div class="panel-group" id="accordion" style="margin-bottom:0px;">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h5 class="panel-title" style="font-size:1em;">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse-000003">
+                            Список участников <span class="caret"></span> 
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapse-000003" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <p>1. User 1</p>
+                          <p>2. User 2</p>
+                          <p>3. User 3</p>
+                          <p>4. User 4</p>
+                          <p>5. User 5</p>
+                          <p>6. User 6</p>
+                          <p>7. User 7</p>
+                          <p>8. User 8</p>
+                          <p>9. User 9</p>
+                          <p>10. User 10</p>
+                          <p>11. User 11</p>
+                          <p>12. User 12</p>
+                          <p>13. User 13</p>
+                          <p>14. User 14</p>
+                          <p>15. User 15</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- Конец списка участников -->
+                </div>
+                <div class="col-md-2">
+                  <p>150 RUB <br> за 2 часа</p>
+                </div>
+                <div class="col-md-2">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-default btn-xs" disabled="disabled" data-toggle="dropdown">Места заполнены</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="tab-pane" id="messages"></div>
-        <div class="tab-pane" id="settings"></div>
+        </div><!-- End of Basketball games -->
+
+        <!-- Volleyball games -->
+        <div class="tab-pane" id="volley">
+          <div class="panel panel-deafult">
+            <br>
+          </div>
+        </div><!-- End of volleyball games -->
+
+        <!-- Football games -->
+        <div class="tab-pane" id="football">
+          <div class="panel panel-deafult">
+            <br>
+          </div>
+        </div><!-- End of football games -->
+
       </div>
 
     </div> <!-- /container -->
