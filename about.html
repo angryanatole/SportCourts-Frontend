@@ -35,6 +35,48 @@
         padding-right: 10px;
       }
 
+      #rotator {
+        position:relative;
+        width:160px; height: 160px;
+        }
+        
+        #rotator ul li {
+        float:left; 
+        position:absolute; 
+        list-style: none;
+        }
+        
+        #rotator ul li.show {
+        z-index:500;
+      }
+
+      .about{
+        width:92%;
+        margin-left:4%;
+        float:left;
+        margin-right:4%;
+        margin-top: 20px;
+      }
+        
+      #about_photo{
+        float:right;
+        padding-left: 15px;
+        padding-bottom: 15px;
+        margin-right: 40px;
+        margin-top: 60px;
+        display:block;
+      }
+
+      #about_photo1{
+        float:right;
+        padding-left: 50px;
+        padding-bottom: 30px;
+        margin-right: 0px;
+        margin-top: 70px;
+        display:block;
+      }
+        
+
     </style>
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
@@ -45,6 +87,46 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+      function theRotator() {
+        // Устанавливаем прозрачность всех картинок в 0
+        $('div#rotator ul li').css({opacity: 0.0});
+       
+        // Берем первую картинку и показываем ее (по пути включаем полную видимость)
+        $('div#rotator ul li:first').css({opacity: 1.0});
+       
+        // Вызываем функцию rotate для запуска слайдшоу, 5000 = смена картинок происходит раз в 5 секунд
+        setInterval('rotate()',10000);
+      }
+       
+      function rotate() { 
+        // Берем первую картинку
+        var current = ($('div#rotator ul li.show')?  $('div#rotator ul li.show') : $('div#rotator ul li:first'));
+       
+        // Берем следующую картинку, когда дойдем до последней начинаем с начала
+        var next = ((current.next().length) ? ((current.next().hasClass('show')) ? $('div#rotator ul li:first') :current.next()) : $('      div#rotator ul li:first')); 
+       
+        // Расскомментируйте, чтобы показвать картинки в случайном порядке
+        // var sibs = current.siblings();
+        // var rndNum = Math.floor(Math.random() * sibs.length );
+        // var next = $( sibs[ rndNum ] );
+       
+        // Подключаем эффект растворения/затухания для показа картинок, css-класс show имеет больший z-index
+        next.css({opacity: 0.0})
+        .addClass('show')
+        .animate({opacity: 1.0}, 1000);
+       
+        // Прячем текущую картинку
+        current.animate({opacity: 0.0}, 1000)
+        .removeClass('show');
+      };
+       
+      $(document).ready(function() {    
+        // Запускаем слайдшоу
+        theRotator();
+      });
+    </script>
   </head>
 
   <body role="document">
@@ -82,36 +164,45 @@
 
     <div class="container theme-showcase" role="main">
       <div class="jumbotron">
+        <h1 class="text-center">Наша команда</h1>
         <div class="row">
-          <div class="col-md-2">
-            <img src="http://cs607716.vk.me/v607716278/78a/mn9rXaqc6s4.jpg" alt="" width="200" style="max-width:170%">
-          </div>
-          <div class="col-md-1"></div>
-          <div class="col-md-4">
-            Виталий Харченко <br>
-            20 лет, Екатеринбург <br>
+          <div class="about">
+            <div id="about_photo">
+              <div id="rotator">
+                <ul>
+                  <li class="show">
+                    <img src="http://distilleryimage4.s3.amazonaws.com/f82be6086f6211e288ea22000a1f9318_7.jpg" height=160 width=160  alt= "pic1" />
+                  </li>
+                  <li>
+                    <img src="http://distilleryimage1.s3.amazonaws.com/044c1ed8576e11e2bbd422000a1f9ab2_7.jpg" height=160 width=160  alt= "pic2" />
+                  </li>
+                  <li>
+                    <img src="http://cs413425.vk.me/v413425278/c6c/Z0w6YOD2D0I.jpg" height=160 width=160  alt="pic3" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <h2 class="column-top first">Виталий Харченко, CEO</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, voluptate cupiditate voluptatem nostrum cumque blanditiis id ex doloribus voluptas libero culpa dignissimos voluptatibus consectetur rerum accusantium veritatis quam ea sint modi veniam officiis ipsum quod repellendus tenetur dicta. Nisi, sit quidem repellendus quo sint architecto velit sapiente at culpa ratione. Tempore, nemo, autem rerum necessitatibus laborum soluta animi earum laboriosam facilis aliquid vero recusandae quibusdam magni quae vitae iste amet voluptates doloremque impedit tenetur quam voluptatibus ea optio molestias reprehenderit modi odio alias. Maiores, nisi sapiente in reiciendis! Velit, delectus, quos reiciendis modi perferendis doloremque nemo repudiandae vel debitis quaerat.</p>
           </div>
         </div>
-        <div id="about">
-          <div id="about_photo">
-            <div id="rotator">
-              <ul>
-                <li class="show">
-                  <img src="http://distilleryimage4.s3.amazonaws.com/f82be6086f6211e288ea22000a1f9318_7.jpg" height=160 width=160  alt="pic1" />
-                </li>
-                <li>
-                  <img src="http://distilleryimage1.s3.amazonaws.com/044c1ed8576e11e2bbd422000a1f9ab2_7.jpg" height=160 width=160  alt="pic2" />
-                </li>
-                <li>
-                  <img src="http://cs413425.vk.me/v413425278/c6c/Z0w6YOD2D0I.jpg" height=160 width=160  alt="pic3" />
-                </li>
-              </ul>
+        <div class="row">
+          <div class="about">
+            <div id="about_photo1">
+              <img src="https://pp.vk.me/c607621/v607621603/365e/PA-odLFrj5M.jpg" height=160 width=160  alt= " pic1" />
             </div>
+            <h2 class="column-top first">Александр Горохов, CTO</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, voluptate cupiditate voluptatem nostrum cumque   blanditiis id ex doloribus voluptas libero culpa dignissimos voluptatibus consectetur rerum accusantium veritatis quam ea   sint modi veniam officiis ipsum quod repellendus tenetur dicta. Nisi, sit quidem repellendus quo sint architecto velit  sapiente at culpa ratione. Tempore, nemo, autem rerum necessitatibus laborum soluta animi earum laboriosam facilis aliquid   vero recusandae quibusdam magni quae vitae iste amet voluptates doloremque impedit tenetur quam voluptatibus ea optio   molestias reprehenderit modi odio alias. Maiores, nisi sapiente in reiciendis! Velit, delectus, quos reiciendis modi  perferendis doloremque nemo repudiandae vel debitis quaerat.</p>
           </div>
-          <h2 class="column-top first">О себе</h2>
-          <p>Я дизайнер продуктов, сайтов и приложений. Профессиональные интересы — информационный дизайн, веб, пользовательский интерфейс, типографика и вёрстка.</p>
-          <p>Я дизайнер продуктов, сайтов и приложений. Профессиональные интересы — информационный дизайн, веб, пользовательский интерфейс, типографика и вёрстка.</p>                        
-          <p>Я дизайнер продуктов, сайтов и приложений. Профессиональные интересы — информационный дизайн, веб, пользовательский интерфейс, типографика и вёрстка.</p>
+        </div>
+        <div class="row">
+          <div class="about">
+            <div id="about_photo1">
+              <img src="https://pp.vk.me/c620126/v620126944/8d32/LO1obQAvBtQ.jpg" height=160 width=160  alt= " pic1" />
+            </div>
+            <h2 class="column-top first">Анатолий Генералов, Front-end</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, voluptate cupiditate voluptatem nostrum cumque   blanditiis id ex doloribus voluptas libero culpa dignissimos voluptatibus consectetur rerum accusantium veritatis quam ea   sint modi veniam officiis ipsum quod repellendus tenetur dicta. Nisi, sit quidem repellendus quo sint architecto velit  sapiente at culpa ratione. Tempore, nemo, autem rerum necessitatibus laborum soluta animi earum laboriosam facilis aliquid   vero recusandae quibusdam magni quae vitae iste amet voluptates doloremque impedit tenetur quam voluptatibus ea optio   molestias reprehenderit modi odio alias. Maiores, nisi sapiente in reiciendis! Velit, delectus, quos reiciendis modi  perferendis doloremque nemo repudiandae vel debitis quaerat.</p>
+          </div>
         </div>
       </div>
     </div> <!-- /container -->
