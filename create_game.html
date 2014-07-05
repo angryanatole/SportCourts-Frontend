@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Sportcourts.ru</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../bootstrap/css/jumbotron-narrow.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 50%; margin: 0; padding: 0 }
+      #map_canvas { height: 50% }
+    </style>
+    <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBa0lZbD9w8oTD-HUb7ZBQ9jaNJcWwvJFs&sensor=false">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(56.8, 60.59),
+          zoom: 12,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+      }
+    </script>
+  </head>
+
+  <body onload="initialize()">
+
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="table.html">Демо-версия</a></li>
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+        <h3 class="text-muted">SportCourts</h3>
+      </div>
+    </div>
+
+  <div class="container theme-showcase" role="main">
+      <div class="jumbotron">
+        <div class="row">
+          <div class="col-md-2">
+            <img src="http://artinvestgrup.ru/userfiles/photos/service/959c6888f2321ceddcb639ca78ddae60.jpg" alt="" width="200" height="100" style="max-width:170%">
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-4">
+            Красноармейская 28а <br>
+            Площадка для баскетбола. <br>
+            Души: есть. <br>
+            Раздевалки: есть <br>
+            Описание: невероятно жаркие красотки в бикини в наличии.
+          </div>
+        </div>
+      </div>
+    </div> <!-- /container -->
+
+    <div id="map_canvas" style="width:50%; height:100%"></div>
+
+      <div class="footer">
+        <p>&copy; SportCourts 2014</p>
+      </div>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
+</html>
